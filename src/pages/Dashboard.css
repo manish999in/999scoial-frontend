@@ -1,0 +1,10 @@
+.dashboard {
+  display: flex; /* make sidebar and content side by side */
+  min-height: 100vh; /* full height */
+  background-color: #fafafa; /* Instagram-like background */
+}
+
+.main-content {
+  flex: 1; /* take remaining space */
+  padding: 20px;
+}
