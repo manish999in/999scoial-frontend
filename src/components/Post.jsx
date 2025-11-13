@@ -19,64 +19,51 @@ const Post = () => {
   }, []);
 
   return (
-    <div className="d-flex flex-column align-items-center">
+    <div className="post-container">
       {posts.map((post) => (
-        <div key={post._id} className="card post-card mb-4">
+        <div key={post._id} className="post-card">
+
           {/* Header */}
-          <div className="card-header d-flex align-items-center">
-            <img
-              src={post.user.profilePic}
-              alt="Profile"
-              className="rounded-circle me-2"
-            />
+          <div className="post-header">
+            <img src={post.user.profilePic} alt="Profile" className="profile-pic" />
             <div>
               <strong>{post.user.username}</strong>
-              <p className="mb-0 text-muted location">{post.location}</p>
+              <p className="location">{post.location}</p>
             </div>
           </div>
 
-          {/* Image */}
+          {/* Post Image */}
           {post.mediaType === "image" && (
-            <img
-              src={post.imageUrl}
-              alt="Post"
-              className="card-img-top post-img"
-            />
+            <img src={post.imageUrl} alt="Post" className="post-img" />
           )}
 
           {/* Actions */}
-          <div className="card-body">
-            <div className="mb-2">
-              <i className={icon.heart + " me-3"}></i>
-              <i className={icon.remark + " me-3"}></i>
-              <i className="fa-solid fa-paper-plane"></i>
-            </div>
+          <div className="actions">
+            <i className={icon.heart}></i>
+            <i className={icon.remark}></i>
+            <i className="fa-solid fa-paper-plane"></i>
+          </div>
 
-            {/* Content */}
-            <p className="mb-1">
-              <strong>{post.user.username}</strong> {post.content}
-            </p>
-            <p className="text-muted">{post.description}</p>
+          {/* Content */}
+          <div className="post-content">
+            <p><strong>{post.user.username}</strong> {post.content}</p>
+            <p className="description">{post.description}</p>
 
             {/* Tags */}
-            <div>
-              {post.tags.map((tag) => (
-                <span key={tag} className="text-primary me-2">
-                  #{tag}
-                </span>
+            <div className="tags">
+              {post.tags?.map((tag) => (
+                <span key={tag}>#{tag}</span>
               ))}
             </div>
 
             {/* Stats */}
-            <div className="d-flex justify-content-between mt-2 text-muted stats">
+            <div className="stats">
               <span>❤️ {post.likes.length} Likes</span>
               <span>💬 {post.comments.length} Comments</span>
             </div>
 
             {/* Date */}
-            <p className="text-end text-muted date">
-              {new Date(post.createdAt).toLocaleString()}
-            </p>
+            <p className="date">{new Date(post.createdAt).toLocaleString()}</p>
           </div>
         </div>
       ))}

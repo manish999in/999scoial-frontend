@@ -1,38 +1,95 @@
+/* Main container */
+.post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+/* Post Card */
 .post-card {
   width: 100%;
-  max-width: 600px; /* Instagram-like width */
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  max-width: 600px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 25px;
   font-family: Arial, sans-serif;
 }
 
-.post-card img {
-  border-radius: 0;
-  width: 100%;
-  height: auto; /* Keep original aspect ratio */
-  object-fit: contain; /* Do not crop images */
-  max-height: 800px;
+/* Header */
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  background: #fff;
 }
 
-.card-header img {
-  width: 40px;
-  height: 40px;
+.profile-pic {
+  width: 45px !important;
+  height: 45px !important;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
 .location {
+  margin: 0;
   font-size: 12px;
+  color: #555;
 }
 
-.stats {
+/* Post Image */
+.post-img {
+  width: 100%;
+  max-height: 650px;
+  object-fit: contain;
+  background: #000;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 18px;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.actions i:hover {
+  opacity: 0.6;
+}
+
+/* Content */
+.post-content {
+  padding: 10px 15px;
+}
+
+.description {
+  color: #666;
+  margin-top: -5px;
+}
+
+/* Tags */
+.tags span {
+  color: #007bff;
+  margin-right: 8px;
   font-size: 14px;
 }
 
-.date {
-  font-size: 12px;
+/* Stats */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: #555;
+  font-size: 14px;
 }
 
-i {
-  font-size: 1.2rem;
-  cursor: pointer;
+/* Date */
+.date {
+  text-align: right;
+  font-size: 12px;
+  color: #777;
+  margin-top: 5px;
 }

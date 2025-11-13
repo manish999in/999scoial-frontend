@@ -38,7 +38,13 @@ const icon = {
     grievanceTracking: "fa-solid fa-magnifying-glass",
     fee: "fa-solid fa-money-check-dollar",
     calendar: "fa-solid fa-calendar",
-    plus: "fa-solid fa-plus"
+    plus: "fa-solid fa-plus",
+    compass: "fa-regular fa-compass",
+    video: "fa-solid fa-clapperboard",
+    message: "fa-brands fa-facebook-messenger",
+    heart: "fa-regular fa-heart",
+    plus: "fa-solid fa-square-plus",
+    user: "fa-regular fa-user",
 
 } 
 export default icon;
