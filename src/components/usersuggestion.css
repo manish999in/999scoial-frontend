@@ -1,0 +1,22 @@
+/* Smooth shadow like Instagram */
+.suggestion-card {
+  transition: 0.2s ease;
+}
+
+.suggestion-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+}
+
+/* Blue follow button similar to Insta */
+.btn-follow {
+  background: linear-gradient(135deg, #007bff, #9333ff);
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+}
+
+.btn-follow:hover {
+  background: linear-gradient(135deg, #9333ff, #007bff);
+  color: #fff;
+}
